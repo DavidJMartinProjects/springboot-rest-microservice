@@ -1,57 +1,40 @@
 package com.store.cart.usecase;
 
-import java.util.Collection;
-
 import org.springframework.http.HttpStatus;
 
 import com.store.cart.IntegrationTestBase;
-import com.store.cart.model.dto.CartDto;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 
-class ReadCartTests extends IntegrationTestBase {
-
-    // <-- Positive GET Requests Tests -->
+class DeleteCartTests extends IntegrationTestBase {
+    // <-- Positive DELETE Request Integration Tests -->
     @Test
-    void WHEN_getRequestToCart_THEN_ok() {
-        // when
-        webTestClient
-            .get()
-            .uri(CART_API_BASE_PATH )
-            .exchange()
-
-            // then
-            .expectStatus()
-            .isOk()
-            .expectBody(Collection.class);
-    }
-
-    @Test
-    void GIVEN_existingCartId_WHEN_getRequestToCartById_THEN_ok() {
+    void GIVEN_existingCustomerId_WHEN_deleteRequestToCustomerById_THEN_noContent() {
         // given
         long existingCartId = 1L;
 
         // when
         webTestClient
-            .get()
+            .delete()
             .uri(CART_API_BASE_PATH + "/" + existingCartId)
             .exchange()
 
             // then
             .expectStatus()
-            .isOk()
-            .expectBody(CartDto.class);
+            .isNoContent()
+            .expectBody()
+            .isEmpty();
     }
 
-    // <-- Negative GET Requests Tests -->
+    // <-- Negative DELETE Request Integration Tests -->
     @Test
-    void GIVEN_nonExistingCartId_WHEN_getRequestToCartById_THEN_notFound() {
+    void GIVEN_nonExistingId_WHEN_deleteRequestToCustomerById_THEN_notFound() {
         // given
         long nonExistingCartId = 100;
 
         // when
         webTestClient
-            .get()
+            .delete()
             .uri(CART_API_BASE_PATH + "/" + nonExistingCartId)
             .exchange()
 
@@ -63,6 +46,4 @@ class ReadCartTests extends IntegrationTestBase {
             .jsonPath("$.developerMessage").value(Matchers.equalTo("Record not found."))
             .jsonPath("$.message").value(Matchers.containsString("Cart with id:{[" + nonExistingCartId + "}] does not exist."));
     }
-
 }
-
