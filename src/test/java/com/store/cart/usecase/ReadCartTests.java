@@ -9,7 +9,7 @@ import com.store.cart.model.dto.CartDto;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 
-public class ReadCartTests extends IntegrationTestBase {
+class ReadCartTests extends IntegrationTestBase {
 
     // <-- Positive GET Requests Tests -->
     @Test
@@ -28,7 +28,7 @@ public class ReadCartTests extends IntegrationTestBase {
     }
 
     @Test
-    void GIVEN_existingCartId_WHEN_getRequestToCustomerById_THEN_ok() {
+    void GIVEN_existingCartId_WHEN_getRequestToCartById_THEN_ok() {
         // given
         long existingCartId = 1L;
 
@@ -48,7 +48,7 @@ public class ReadCartTests extends IntegrationTestBase {
     @Test
     void GIVEN_nonExistingCartId_WHEN_getRequestToCartById_THEN_notFound() {
         // given
-        final long nonExistingCartId = 100;
+        long nonExistingCartId = 100;
 
         // when
         webTestClient
