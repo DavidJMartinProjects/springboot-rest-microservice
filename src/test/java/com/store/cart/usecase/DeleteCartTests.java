@@ -7,6 +7,7 @@ import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 
 class DeleteCartTests extends IntegrationTestBase {
+
     // <-- Positive DELETE Request Integration Tests -->
     @Test
     void GIVEN_existingCustomerId_WHEN_deleteRequestToCustomerById_THEN_noContent() {
