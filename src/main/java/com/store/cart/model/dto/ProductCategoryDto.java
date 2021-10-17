@@ -1,6 +1,5 @@
 package com.store.cart.model.dto;
 
-import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,18 +7,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @author david
+ * @author Dave
  */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class CartDto {
+public class ProductCategoryDto {
 
     private Long id;
 
-    private long customerId;
-    private double totalPrice;
-    private List<ItemDto> items;
+    private String category;
+    private String sku;
 
 }

@@ -31,6 +31,6 @@ public class ItemEntity {
 
     @OneToOne(orphanRemoval = true)
     @JoinColumn(name = "product_id")
-    private ProductEntity productEntity;
+    private ProductEntity product;
 
 }

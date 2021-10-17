@@ -32,7 +32,7 @@ public class CartEntity {
 
     @OneToMany(orphanRemoval = true)
     @JoinColumn(name = "cart_id")
-    private List<ItemEntity> itemEntities;
+    private List<ItemEntity> items;
 
     @Column(name = "total_price")
     private double totalPrice;

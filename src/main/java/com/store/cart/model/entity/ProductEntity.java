@@ -1,8 +1,5 @@
 package com.store.cart.model.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,6 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author david
@@ -37,6 +37,6 @@ public class ProductEntity {
 
     @OneToOne(orphanRemoval = true)
     @JoinColumn(name = "product_category_id")
-    private ProductCategoryEntity productCategoryEntity;
+    private ProductCategoryEntity productCategory;
 
 }
