@@ -18,6 +18,7 @@ integrate generated code to controller
 
 // ToDo
 add mvn module for the open-api spec
+add contract test cases
 implement Pagination and Sorting
 implement events with rabbitMq (events + write table to topic on update to be read by other services)
 build test profile (H2, testcontainer for redis)
