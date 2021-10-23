@@ -1,17 +1,17 @@
 package com.store.cart.controller;
 
-import org.openapitools.api.CartApi;
-import org.openapitools.model.CartDto;
+import java.util.List;
 
 import com.store.cart.service.CartService;
 
-import java.util.List;
-import lombok.extern.slf4j.Slf4j;
+import org.openapitools.api.CartApi;
+import org.openapitools.model.CartDto;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import lombok.extern.slf4j.Slf4j;
 
 
 /**
@@ -25,12 +25,6 @@ public class CartController implements CartApi {
 
     @Autowired
     private CartService cartService;
-
-    @GetMapping(CART_BASE_PATH + "/page")
-    public ResponseEntity<List<CartDto>> getPaginatedCarts() {
-        log.info(CART_BASE_PATH + "/page");
-        return ResponseEntity.ok().build();
-    }
 
     @Override
     public ResponseEntity<List<CartDto>> getCarts() {
