@@ -1,9 +1,9 @@
 package com.store.cart.usecase;
 
-import org.openapitools.model.CartDto;
-import com.store.cart.IntegrationTestBase;
-
 import java.util.Objects;
+
+import com.store.cart.IntegrationTestBase;
+import org.openapitools.model.CartDto;
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Mono;
 
@@ -23,7 +23,7 @@ class UpdateCartTests extends IntegrationTestBase {
                 .getResponseBody()
                 .blockFirst();
 
-        Objects.requireNonNull(cart);
+        assert cart != null;
         cart.setTotalPrice(111.11);
 
         // when
@@ -55,7 +55,7 @@ class UpdateCartTests extends IntegrationTestBase {
                 .getResponseBody()
                 .blockFirst();
 
-        Objects.requireNonNull(cart);
+        assert cart != null;
         cart.setId(nonExistingCartId);
         cart.setTotalPrice(222.22);
 
