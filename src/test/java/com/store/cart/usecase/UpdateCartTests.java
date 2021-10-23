@@ -23,7 +23,8 @@ class UpdateCartTests extends IntegrationTestBase {
                 .getResponseBody()
                 .blockFirst();
 
-        Objects.requireNonNull(cart).setTotalPrice(111.11);
+        Objects.requireNonNull(cart);
+        cart.setTotalPrice(111.11);
 
         // when
         webTestClient
