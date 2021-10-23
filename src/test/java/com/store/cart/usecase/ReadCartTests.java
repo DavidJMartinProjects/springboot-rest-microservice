@@ -13,11 +13,11 @@ class ReadCartTests extends IntegrationTestBase {
 
     // <-- Positive GET Requests Tests -->
     @Test
-    void WHEN_getRequestToCart_THEN_ok() {
+    void WHEN_getRequestToCarts_THEN_ok() {
         // when
         webTestClient
             .get()
-            .uri(CART_API_BASE_PATH )
+            .uri(CART_API_BASE_PATH)
             .exchange()
 
             // then

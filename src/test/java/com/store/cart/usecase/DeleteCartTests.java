@@ -10,7 +10,7 @@ class DeleteCartTests extends IntegrationTestBase {
 
     // <-- Positive DELETE Request Integration Tests -->
     @Test
-    void GIVEN_existingCustomerId_WHEN_deleteRequestToCustomerById_THEN_noContent() {
+    void GIVEN_existingCartId_WHEN_deleteRequestToCartById_THEN_noContent() {
         // given
         long existingCartId = 1L;
 
@@ -29,7 +29,7 @@ class DeleteCartTests extends IntegrationTestBase {
 
     // <-- Negative DELETE Request Integration Tests -->
     @Test
-    void GIVEN_nonExistingId_WHEN_deleteRequestToCustomerById_THEN_notFound() {
+    void GIVEN_nonExistingCartId_WHEN_deleteRequestToCartById_THEN_notFound() {
         // given
         long nonExistingCartId = 100;
 
