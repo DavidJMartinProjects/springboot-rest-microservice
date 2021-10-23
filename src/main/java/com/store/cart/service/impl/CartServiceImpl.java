@@ -1,16 +1,17 @@
 package com.store.cart.service.impl;
 
-import com.store.cart.model.dto.CartDto;
+import org.openapitools.model.CartDto;
 import com.store.cart.model.entity.CartEntity;
+
 import com.store.cart.model.mapper.CartMapper;
 import com.store.cart.repository.CartRepository;
 import com.store.cart.service.CartService;
-import org.mapstruct.factory.Mappers;
-import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityNotFoundException;
 import java.util.List;
 import java.util.stream.Collectors;
+import org.mapstruct.factory.Mappers;
+import org.springframework.stereotype.Service;
+import javax.persistence.EntityNotFoundException;
 
 /**
  * @author david

@@ -1,6 +1,6 @@
 package com.store.cart.service;
 
-import com.store.cart.model.dto.CartDto;
+import org.openapitools.model.CartDto;
 
 import java.util.List;
 

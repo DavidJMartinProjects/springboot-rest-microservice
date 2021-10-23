@@ -1,6 +1,6 @@
 package com.store.cart.model.mapper;
 
-import com.store.cart.model.dto.CartDto;
+import org.openapitools.model.CartDto;
 import com.store.cart.model.entity.CartEntity;
 import org.mapstruct.Mapper;
 

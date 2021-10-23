@@ -5,7 +5,7 @@ import java.util.Collection;
 import org.springframework.http.HttpStatus;
 
 import com.store.cart.IntegrationTestBase;
-import com.store.cart.model.dto.CartDto;
+import org.openapitools.model.CartDto;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 
