@@ -23,8 +23,7 @@ class UpdateCartTests extends IntegrationTestBase {
                 .getResponseBody()
                 .blockFirst();
 
-        Objects.requireNonNull(cart)
-            .setTotalPrice(111.11);
+        Objects.requireNonNull(cart).setTotalPrice(111.11);
 
         // when
         webTestClient
@@ -55,7 +54,7 @@ class UpdateCartTests extends IntegrationTestBase {
                 .getResponseBody()
                 .blockFirst();
 
-        assert cart != null;
+        Objects.requireNonNull(cart);
         cart.setId(nonExistingCartId);
         cart.setTotalPrice(222.22);
 
