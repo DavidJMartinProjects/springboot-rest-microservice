@@ -9,6 +9,7 @@ import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -24,6 +25,12 @@ public class CartController implements CartApi {
 
     @Autowired
     private CartService cartService;
+
+    @GetMapping(CART_BASE_PATH + "/page")
+    public ResponseEntity<List<CartDto>> getPaginatedCarts() {
+        log.info(CART_BASE_PATH + "/page");
+        return ResponseEntity.ok().build();
+    }
 
     @Override
     public ResponseEntity<List<CartDto>> getCarts() {
