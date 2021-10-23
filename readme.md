@@ -10,3 +10,16 @@ http://localhost:8080/v3/api-docs
 http://localhost:8080/v3/api-docs.yaml
 
 /swagger-ui.html
+
+// Done
+integrate openapi.yaml
+generate interface and model classes 
+integrate generated code to controller
+
+// ToDo
+add mvn module for the open-api spec
+implement Pagination and Sorting
+implement events with rabbitMq (events + write table to topic on update to be read by other services)
+build test profile (H2, testcontainer for redis)
+build production profile (Postgres, redis embedded or Dockerfile)
+
