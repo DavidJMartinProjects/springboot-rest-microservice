@@ -6,12 +6,11 @@ import org.openapitools.model.CartDto;
 import com.store.cart.service.CartService;
 
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import lombok.extern.slf4j.Slf4j;
 
 
 /**
