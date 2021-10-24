@@ -20,6 +20,7 @@
         <springfox.version>2.9.2</springfox.version>
         <jackson-databind.version>0.2.1</jackson-databind.version>
         <openapi-generator.version>5.1.0</openapi-generator.version>
+        <spring-cloud.version>2.1.1.RELEASE</spring-cloud.version>
     </properties>
 
     <dependencies>
@@ -91,6 +92,13 @@
 			<artifactId>jackson-databind-nullable</artifactId>
 			<version>0.2.1</version>
 		</dependency>
+        <!--  Spring Cloud Contract	-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-contract-verifier</artifactId>
+            <scope>test</scope>
+            <version>${spring-cloud.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -176,6 +184,15 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-contract-maven-plugin</artifactId>
+                <version>${spring-cloud.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <baseClassForTests>com.store.cart.ContractTestBase</baseClassForTests>
+                </configuration>
             </plugin>
         </plugins>
     </build>
