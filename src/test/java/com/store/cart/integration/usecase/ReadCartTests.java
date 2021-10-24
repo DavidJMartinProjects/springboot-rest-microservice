@@ -1,10 +1,10 @@
-package com.store.cart.usecase;
+package com.store.cart.integration.usecase;
 
 import java.util.Collection;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.openapitools.model.CartDto;
-import com.store.cart.IntegrationTestBase;
+import com.store.cart.integration.IntegrationTestBase;
 import org.springframework.http.HttpStatus;
 
 class ReadCartTests extends IntegrationTestBase {

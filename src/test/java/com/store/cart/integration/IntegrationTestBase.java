@@ -1,4 +1,4 @@
-package com.store.cart;
+package com.store.cart.integration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;

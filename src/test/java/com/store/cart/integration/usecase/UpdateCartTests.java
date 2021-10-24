@@ -1,10 +1,9 @@
-package com.store.cart.usecase;
+package com.store.cart.integration.usecase;
 
-import java.util.Objects;
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Mono;
 import org.openapitools.model.CartDto;
-import com.store.cart.IntegrationTestBase;
+import com.store.cart.integration.IntegrationTestBase;
 
 class UpdateCartTests extends IntegrationTestBase {
 

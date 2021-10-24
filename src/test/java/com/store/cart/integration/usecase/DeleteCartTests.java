@@ -1,9 +1,9 @@
-package com.store.cart.usecase;
+package com.store.cart.integration.usecase;
 
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
-import com.store.cart.IntegrationTestBase;
+import com.store.cart.integration.IntegrationTestBase;
 import org.springframework.http.HttpStatus;
 
 class DeleteCartTests extends IntegrationTestBase {
