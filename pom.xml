@@ -139,7 +139,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<inputSpec>${project.basedir}/api-spec/src/main/resources/cart-service.v1.yaml</inputSpec>
+							<inputSpec>${project.basedir}/api-spec/src/main/resources/cart.service.api.v1.yaml</inputSpec>
 							<generatorName>spring</generatorName>
 							<configOptions>
                                 <sourceFolder>src/gen/java/main</sourceFolder>
