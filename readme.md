@@ -5,8 +5,6 @@ This project exposes a RESTful API that allows users to add various Products to 
 
 ## Technologies & Frameworks
 
-With the above use-case, we can demonstrate the use of the various SpringBoot based frameworks and microservice design patterns
-
 - Open API
 - SpringBoot
 - Spring JPA
