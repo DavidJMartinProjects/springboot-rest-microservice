@@ -7,9 +7,9 @@ services:
     image: postgres:13.2
     restart: always
     environment:
-      - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=cart-app
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=postgres
     ports:
       - "5432:5432"
     volumes:
